@@ -1,0 +1,243 @@
+/* -------------flash fix -------------*/
+div {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+                                    /* Chrome and Safari /
+-moz-backface-visibility:hidden; / Firefox */ }
+
+a {
+  text-decoration: none !important; }
+
+.ui-page {
+  -webkit-backface-visibility: hidden; }
+
+* {
+  text-shadow: none !important; }
+
+/* ------------- global positioning -------------*/
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+/* ------------- Theme tweaks -------------*/
+fieldset.fieldset1 {
+  padding: 10px 5%;
+  margin-bottom: 10px;
+  width: 90%;
+  background: #B2DFDB; }
+
+.ui-input-text input, .ui-input-search input {
+  color: #004D40; }
+
+/* ------------- global typography -------------*/
+body {
+  font-weight: normal;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif; }
+
+h1, h2, h3 {
+  font-weight: normal; }
+
+h1 {
+  font-size: 1.6em; }
+
+/* ------------- Header -------------*/
+.header {
+  height: 60px;
+  background-image: url(../images/CookChook_logo.png);
+  background-repeat: no-repeat;
+  background-size: 230px;
+  background-position: center center; }
+  .header h1 {
+    text-indent: -9999px; }
+
+/* ------------- Home -------------*/
+body #home {
+  overflow: hidden;
+  background-color: #1f918c;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#009688), to(#24B9A2));
+  background: -webkit-linear-gradient(top, #009688, #24B9A2);
+  background: -moz-linear-gradient(top, #009688, #24B9A2);
+  background: -ms-linear-gradient(top, #009688, #24B9A2);
+  background: -o-linear-gradient(top, #009688, #24B9A2);
+  text-align: center; }
+  body #home h1 {
+    font-size: 1.6em;
+    margin-top: 5px; }
+    @media all and (min-width: 350px) {
+      body #home h1 {
+        margin-top: 20px; } }
+  body #home .ui-content a {
+    font-size: 1.1em;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 7px; }
+  body #home .ui-panel p {
+    color: #004D40;
+    font-size: .9em; }
+  body #home .ui-input-text {
+    margin: 0 0 2px 0; }
+  body #home .timeInputs {
+    width: 100%;
+    background: #f9f9f9;
+    float: left;
+    height: 38px;
+    overflow: hidden; }
+    body #home .timeInputs .ui-input-text {
+      width: 32%;
+      float: left;
+      padding: 0;
+      margin: 0; }
+      body #home .timeInputs .ui-input-text input {
+        width: 50px;
+        padding: 0 0 0 8px;
+        margin: -5px 0 0 0;
+        font-size: 1.4em;
+        font-weight: normal; }
+    body #home .timeInputs .itemHrs {
+      background: url(../images/h_icon.png) no-repeat;
+      background-size: 12px;
+      background-position: right center; }
+    body #home .timeInputs .itemMin {
+      background: url(../images/m_icon.png) no-repeat;
+      background-size: 12px;
+      background-position: right center; }
+    body #home .timeInputs .itemSec {
+      background: url(../images/s_icon.png) no-repeat;
+      background-size: 12px;
+      background-position: right center; }
+
+.home_feature {
+  position: fixed;
+  width: 86%;
+  left: 8%;
+  overflow: hidden;
+  margin-top: 0px;
+  border: none; }
+  .home_feature img {
+    max-width: 80%; }
+  @media all and (min-width: 350px) {
+    .home_feature {
+      max-width: 90%; } }
+  @media all and (min-width: 640px) {
+    .home_feature {
+      max-width: 60%;
+      left: 20%; } }
+  @media all and (min-width: 900px) {
+    .home_feature {
+      max-width: 40%;
+      left: 30%; } }
+
+/* Scss Document */
+#timerWrapper h1 {
+  font-size: 1.2em;
+  font-weight: normal;
+  font-style: italic;
+  letter-spacing: 0.05em;
+  padding: 10px 5%;
+  width: 90%;
+  float: left;
+  display: block;
+  background: #4CB5AB;
+  color: #ffffff;
+  margin-bottom: 0;
+  text-align: center; }
+#timerWrapper .countdownWrapper {
+  position: relative;
+  float: left;
+  width: 52%; }
+  #timerWrapper .countdownWrapper input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: #E0F1F0;
+    display: block;
+    padding: 10px 0 6px;
+    width: 32%;
+    float: left;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: normal;
+    color: #004D40;
+    font-family: 'Open Sans', sans-serif; }
+    #timerWrapper .countdownWrapper input.resetMin {
+      left: 33%; }
+    #timerWrapper .countdownWrapper input.resetSec {
+      left: 66%; }
+#timerWrapper .countdown {
+  position: absolute;
+  display: block;
+  top: 0;
+  background: #E0F1F0;
+  padding: 10px 5% 10px 5%;
+  width: 90%;
+  height: 30px;
+  font-size: 1.4em;
+  text-align: center;
+  z-index: 100; }
+#timerWrapper .btnsWrapper {
+  position: relative;
+  float: right;
+  width: 47.5%; }
+#timerWrapper .ui-btn {
+  width: 33%;
+  padding: 15px 0%;
+  float: left;
+  text-indent: -9999px;
+  margin: 0;
+  border: none; }
+  #timerWrapper .ui-btn.play {
+    background: url(../images/play.png) no-repeat;
+    background-size: 42%;
+    background-position: center center; }
+    @media all and (min-width: 600px) {
+      #timerWrapper .ui-btn.play {
+        background-size: 40px; } }
+  #timerWrapper .ui-btn.pause {
+    background: url(../images/pause.png) no-repeat;
+    background-size: 40%;
+    background-position: center center; }
+    @media all and (min-width: 600px) {
+      #timerWrapper .ui-btn.pause {
+        background-size: 40px; } }
+  #timerWrapper .ui-btn.reset {
+    float: right;
+    background: url(../images/clear.png) no-repeat;
+    background-size: 50%;
+    background-position: center center; }
+    @media all and (min-width: 600px) {
+      #timerWrapper .ui-btn.reset {
+        background-size: 40px; } }
+  #timerWrapper .ui-btn.resetStart {
+    position: absolute;
+    background: #f9f9f9 url(../images/play.png) no-repeat;
+    background-size: 42%;
+    background-position: center center;
+    top: 0;
+    left: 0;
+    height: 50px; }
+    @media all and (min-width: 600px) {
+      #timerWrapper .ui-btn.resetStart {
+        background-size: 40px; } }
+  #timerWrapper .ui-btn.alarmStop {
+    background: #f9f9f9 url(../images/alarmOff.png) no-repeat;
+    background-size: 55%;
+    background-position: center center;
+    position: absolute;
+    top: 0;
+    right: 0; }
+    @media all and (min-width: 600px) {
+      #timerWrapper .ui-btn.alarmStop {
+        background-size: 40px; } }
+
+/* ------------- Header -------------*/
+#footer-nav {
+  /*.ui-btn-active {
+  	background: #03897B !important;	
+  }*/ }
+  #footer-nav a {
+    font-weight: normal; }

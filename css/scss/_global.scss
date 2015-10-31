@@ -1,0 +1,51 @@
+/* -------------flash fix -------------*/
+div
+{
+backface-visibility:hidden;
+-webkit-backface-visibility:hidden; /* Chrome and Safari /
+-moz-backface-visibility:hidden; / Firefox */
+}
+a {
+	text-decoration:none !important;	
+}
+.ui-page {
+-webkit-backface-visibility: hidden;
+}
+* {text-shadow: none !important;	
+}
+
+
+/* ------------- global positioning -------------*/
+.right {
+	float: right;	
+}
+.left {
+	float: left;	
+}
+
+
+/* ------------- Theme tweaks -------------*/
+fieldset.fieldset1 {
+	padding: 10px 5%;
+	margin-bottom: 10px;
+	width: 90%;
+	background: #B2DFDB;	
+}
+.ui-input-text input, .ui-input-search input {
+	color: #004D40;	
+}
+
+/* ------------- global typography -------------*/
+body {
+	font-weight: normal;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;		
+}
+h1, h2, h3 {
+	font-weight: normal;	
+}
+h1 {
+	font-size: 1.6em;	
+}
+
+

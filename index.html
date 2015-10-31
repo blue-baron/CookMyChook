@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mobile Applications</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style">
+
+    <!-- fonts -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    
+    <!-- css files -->
+    <link rel="stylesheet" href="css/jquery.mobile.structure-1.4.2.min.css" />
+    <link rel="stylesheet" href="themes/CookChook.css" />
+    <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+ 
+    <!-- iPhone and iPad icons -->
+    <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone-retina-display.png" />
+
+</head>
+	
+<body>
+
+<!-- ///////////////////////////// HOME ///////////////////////////// -->
+
+<div data-role="page" data-control-title="Home" id="home" data-theme="a">
+	
+	<div data-role="panel" data-theme="c" data-display="overlay" data-position="right" id="chickenFormPanel">
+   	
+    <form id="chickenForm" class="setTimersForm">
+      	
+        <fieldset data-role="controlgroup" class="fieldset1">
+        	<label for="item_0" class="ui-hidden-accessible">Menu Item 1</label>
+           	<select data-role="select" name="item_0" id="item_0" class="itemName" type="text"/> 
+            	<option value = "Timer" selected> -- Chicken Size --  </option>
+                <option value = "Roast Chicken 1.0kg">Roast Chicken 1.0kg</option>
+                <option value = "Roast Chicken 1.2kg">Roast Chicken 1.2kg</option>
+                <option value = "Roast Chicken 1.4kg">Roast Chicken 1.4kg</option>
+                <option value = "Roast Chicken 1.6kg">Roast Chicken 1.6kg</option>
+                <option value = "Roast Chicken 1.8kg">Roast Chicken 1.8kg</option>
+                <option value = "Roast Chicken 2.0kg">Roast Chicken 2.0kg</option>
+                <option value = "Roast Chicken 2.2kg">Roast Chicken 2.2kg</option>
+            	</select>
+           	
+           <div id="timeInputs" class="timeInputs">
+            <label for="hrs_0" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="hrs_0" id="hrs_0" class="itemHrs" type="text" />
+            
+             <label for="min_0" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="min_0" id="min_0" class="itemMin" type="text" />
+            
+             <label for="sec_0" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="sec_0" id="sec_0" class="itemSec" type="text" />
+            </div><!-- end .timeInputs -->
+          	</fieldset>
+
+		<fieldset data-role="controlgroup" class="fieldset1">
+			<label for="item_1" class="ui-hidden-accessible">Menu Item 2</label>
+  			<select data-role="select" name="item_1" id="item_1" class="itemName" type="text"/> 
+            	<option value = "Timer" selected> -- Vegetables --  </option>
+                <option value = "Roast Asparagus">Roast Asparagus</option>
+                <option value = "Roast Broccoli">Roast Broccoli</option>
+                <option value = "Roast Capsicum">Roast Capsicum</option>
+                <option value = "Roast Carrots">Roast Carrots</option>
+                <option value = "Roast Mushrooms">Roast Mushrooms</option>
+                <option value = "Roast Parsnips">Roast Parsnips</option>
+                <option value = "Roast Potatoes">Roast Potatoes</option>
+                <option value = "Roast Pumpkin">Roast Pumpkin</option>
+                <option value = "Roast Zucchini">Roast Zucchini</option>
+                <option value = "Timer">Other</option>
+            	</select>
+           
+           <div class="timeInputs">
+            <label for="hrs_1" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="hrs_1" id="hrs_1" class="itemHrs" type="text" />
+            
+             <label for="min_1" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="min_1" id="min_1" class="itemMin" type="text" />
+            
+             <label for="sec_1" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="sec_1" id="sec_1" class="itemSec" type="text" />
+            </div><!-- end .timeInputs -->
+			</fieldset>
+
+		<fieldset data-role="controlgroup" class="fieldset1">
+			<label for="item_2" class="ui-hidden-accessible">Menu Item 3</label>
+			<select data-role="select" name="item_2" id="item_2" class="itemName" type="text"/> 
+            	<option value = "Timer" selected> -- Vegetables --  </option>
+                <option value = "Roast Asparagus">Roast Asparagus</option>
+                <option value = "Roast Broccoli">Roast Broccoli</option>
+                <option value = "Roast Capsicum">Roast Capsicum</option>
+                <option value = "Roast Carrots">Roast Carrots</option>
+                <option value = "Roast Mushrooms">Roast Mushrooms</option>
+                <option value = "Roast Parsnips">Roast Parsnips</option>
+                <option value = "Roast Potatoes">Roast Potatoes</option>
+                <option value = "Roast Pumpkin">Roast Pumpkin</option>
+                <option value = "Roast Zucchini">Roast Zucchini</option>
+                <option value = "Timer">Other</option>
+            	</select>
+           
+           <div class="timeInputs">
+            <label for="hrs_2" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="hrs_2" id="hrs_2" class="itemHrs" type="text" />
+            
+             <label for="min_2" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="min_2" id="min_2" class="itemMin" type="text" />
+            
+             <label for="sec_2" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="sec_2" id="sec_2" class="itemSec" type="text" />
+            </div><!-- end .timeInputs -->
+			</fieldset>
+
+		<button type="button" id="chookTimersBtn" class="runTimersBtn">Set Timers</button>
+		<p>Sending this form removes any timers that are already running.</p>
+        </form>                  
+                
+	</div><!-- /panel -->
+    
+    <div data-role="panel" data-theme="c" data-display="overlay" data-position="right" id="defaultFormPanel">
+   	<form id="defaultForm" class="setTimersForm">
+      
+        <fieldset data-role="controlgroup" class="fieldset1">
+			<label for="item_0" class="ui-hidden-accessible">Menu Item 1</label>
+    		<input placeholder="Menu Item" name="item_0" id="item_0" class="itemName" type="text"/>
+			
+            <div class="timeInputs">
+            <label for="hrs_3" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="hrs_3" id="hrs_3" class="itemHrs" type="text" />
+            
+             <label for="min_3" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="min_3" id="min_3" class="itemMin" type="text" />
+            
+             <label for="sec_3" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="sec_3" id="sec_3" class="itemSec" type="text" />
+            </div><!-- end .timeInputs -->
+			</fieldset>
+
+		<fieldset data-role="controlgroup" class="fieldset1">
+			<label for="item_1" class="ui-hidden-accessible">Menu Item 2</label>
+    		<input placeholder="Menu Item" name="item_1" id="item_1" class="itemName" type="text"/>
+			
+            <div class="timeInputs">
+            <label for="hrs_4" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="hrs_4" id="hrs_4" class="itemHrs" type="text" />
+            
+             <label for="min_4" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="min_4" id="min_4" class="itemMin" type="text" />
+            
+             <label for="sec_4" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="sec_4" id="sec_4" class="itemSec" type="text" />
+            </div><!-- end .timeInputs -->
+            
+			</fieldset>
+
+		<fieldset data-role="controlgroup" class="fieldset1">
+			<label for="item_2" class="ui-hidden-accessible">Menu Item 3</label>
+    		<input placeholder="Menu Item" name="item_2" id="item_2" class="itemName" type="text"/>
+			
+            <div class="timeInputs">
+            <label for="hrs_5" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="hrs_5" id="hrs_5" class="itemHrs" type="text" />
+            
+             <label for="min_5" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="min_5" id="min_5" class="itemMin" type="text" />
+            
+             <label for="sec_5" class="ui-hidden-accessible">Time</label>
+    		<input placeholder="00" name="sec_5" id="sec_5" class="itemSec" type="text" />
+            </div><!-- end .timeInputs -->
+			</fieldset>
+
+		<button type="button" id="defaultTimersBtn" class="runTimersBtn">Set Timers</button>
+		<p>Sending this form removes any timers that are already running.</p>
+        </form>                  
+           
+	</div><!-- /panel -->
+    
+    <div data-role="header" data-position="fixed" data-theme="a" class="header" data-tap-toggle="false">
+  		<h1 class="ui-title">Cook My Chook</h1>
+		</div>
+    
+    <div role="main" class="ui-content">
+ 	
+        <h1 class="homeHeader">Today I will make</h1>
+        
+        	<a class="ui-btn ui-btn-c" href="#chickenFormPanel">Roast Chicken</a>
+        	<a class="ui-btn ui-btn-c" href="#defaultFormPanel">Something Else</a>
+            
+        <div class="home_feature">
+        <img src="images/housewife_home.png" alt="A housewife holding a roast chicken."/>
+        </div>
+       
+    </div><!-- end main -->
+    
+    <div data-role="footer" data-position="fixed" data-theme="b" style="border:none;" id="footer-nav" data-tap-toggle="false">
+   		<div data-role="navbar">
+        	<ul>
+            <li>
+            	<a href="#home" data-icon="home" data-transition="none" class="ui-btn-active ui-state-persist">
+                <div class="tabText">Home</div>
+                </a>
+            </li>
+            <li>
+            	<a href="#timers" data-icon="clock" data-transition="none">
+                <div class="tabText">Timers</div>
+                </a>
+            </li>
+            <li>
+            	<a href="#contact" data-icon="mail" data-transition="none">
+                <div class="tabText">Feedback</div>
+                </a>
+            </li>
+            </ul>
+        </div><!-- end navbar -->
+    </div><!-- end footer -->
+    
+</div><!-- end page -->
+
+
+
+<!-- ///////////////////////////// TIMERS ///////////////////////////// -->
+
+<div data-role="page" data-control-title="Timers" id="timers" data-theme="c">
+	
+   
+   
+   	<div data-role="header" data-position="fixed" data-theme="a" class="header" data-tap-toggle="false">
+  		<h1 class="ui-title">Timers</h1>
+		</div>
+    
+    <div role="main" class="ui-content">
+    
+    	<div id="noTimersMsg">
+        	<h1>There are currently no timers running.</h1>
+        	<p>Timers can set from the <a class="ui-btn" href="#home">HOME PAGE</a></p>
+        	</div>
+        
+       <div id="timerWrapper"></div>
+        
+       <audio id="alarm" preload="auto" loop>
+  			<source src="audio/Annoying_Alarm.mp3" type="audio/mpeg">
+            <source src="audio/Annoying_Alarm.ogg" type="audio/ogg">
+  			<source src="audio/Annoying_Alarm.wav" type="audio/wav">
+            Your browser does not support the audio element.
+			</audio>
+        
+  
+    </div><!-- end main -->
+    
+    <div data-role="footer" data-position="fixed" data-theme="b" style="border:none;" id="footer-nav" data-tap-toggle="false">
+   		<div data-role="navbar">
+        	<ul>
+            <li>
+            	<a href="#home" data-icon="home" data-transition="none">
+                <div class="tabText">Home</div>
+                </a>
+            </li>
+            <li>
+            	<a href="#timers" data-icon="clock" data-transition="none" class="ui-btn-active ui-state-persist">
+                <div class="tabText">Timers</div>
+                </a>
+            </li>
+            <li>
+            	<a href="#contact" data-icon="mail" data-transition="none">
+                <div class="tabText">Feedback</div>
+                </a>
+            </li>
+            </ul>
+        </div><!-- end navbar -->
+    </div><!-- end footer -->
+
+</div><!-- end TIMERS page -->
+
+
+<!-- ///////////////////////////// CONTACT ///////////////////////////// -->
+
+
+<div data-role="page" data-control-title="Contact" id="contact" data-theme="c">
+	
+    <div data-role="header" data-position="fixed" data-theme="a" class="header" data-tap-toggle="false">
+  		<h1 class="ui-title">Contact Us</h1>
+		</div>
+    
+    <div role="main" class="ui-content">
+    	<h2>Contact Us</h2>
+        <p><a href="tel:0431318031" class="ui-btn ui-btn-custom ui-icon-phone ui-btn-icon-left" data-transition="none">
+        0431 318 031</a>
+        </p>
+        <p><a href="mailto:hello@hilaryseselja.com" class="ui-btn ui-btn-custom ui-icon-mail ui-btn-icon-left" data-transition="none">
+        hello@hilaryseselja.com
+        </a>
+        </p> 
+    </div>
+   
+       <div data-role="footer" data-position="fixed" data-theme="b" style="border:none;" id="footer-nav" data-tap-toggle="false">
+   		<div data-role="navbar">
+        	<ul>
+            <li>
+            	<a href="#home" data-icon="home" data-transition="none" >
+                <div class="tabText">Home</div>
+                </a>
+            </li>
+            <li>
+            	<a href="#timers" data-icon="clock" data-transition="none">
+                <div class="tabText">Timers</div>
+                </a>
+            </li>
+            <li>
+            	<a href="#contact" data-icon="mail" data-transition="none" class="ui-btn-active ui-state-persist">
+                <div class="tabText">Feedback</div>
+                </a>
+            </li>
+            </ul>
+        </div><!-- end navbar -->
+    </div><!-- end footer -->
+
+</div><!-- end CONTACT page -->
+
+
+<!-- scripts at the bottom of the pge to make the page load faster -->
+    
+    <!-- jQuery -->
+    <script src="js/jquery-1.9.1.min.js"></script>
+    
+    <!-- Script to enable files in Chrome -->
+    <script>
+        $(document).bind('mobileinit',function(){
+            $.mobile.changePage.defaults.changeHash = false;
+            $.mobile.hashListeningEnabled = false;
+            $.mobile.pushStateEnabled = false;
+        });
+    </script>
+
+    <!-- jQuery Mobile -->
+    <script src="js/jquery.mobile-1.4.2.min.js"></script>
+    
+    <!-- Timers -->
+  	<script src="js/CookChookTimers.js"></script>
+    
+    <!-- jQuery functions - form handling -->
+    <!--<script src="js/main.js"></script>-->
+    
+</body>
+
+</html>

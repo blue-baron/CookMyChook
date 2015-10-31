@@ -1,0 +1,128 @@
+/* Scss Document */
+#timerWrapper {
+	
+	h1 {
+		font-size: 1.2em;
+		font-weight: normal;
+		font-style: italic;
+		letter-spacing: 0.05em;
+		padding: 10px 5%;
+		width: 90%;
+		float: left;
+		display: block;
+		background: #4CB5AB;	
+		color: #ffffff;
+		margin-bottom: 0;
+		text-align: center;
+	}
+	.countdownWrapper {
+		
+		position: relative;
+		float: left;
+		width: 52%;
+		
+		input {
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 200;
+			background: #E0F1F0;
+			display: block;
+			padding: 10px 0 6px;
+			width: 32%;
+			float: left;
+			font-size: 1.4em;
+			text-align: center;
+			font-weight: normal;
+			color: #004D40;
+			font-family: 'Open Sans', sans-serif;
+			
+			&.resetMin {
+				left: 33%;
+			}
+			&.resetSec {
+				left: 66%;
+			}
+		}
+	}
+	.countdown {
+		position: absolute;
+		display: block;
+		top: 0;
+		background: #E0F1F0;
+		padding: 10px 5% 10px 5%;
+		width: 90%;
+		height: 30px;
+		font-size: 1.4em;
+		text-align: center;
+		z-index: 100;	
+	}
+	
+	.btnsWrapper {
+		position: relative;
+		float: right;
+		width: 47.5%;
+	}
+	.ui-btn {
+		width: 33%;
+		padding: 15px 0%;
+		float: left;
+		text-indent: -9999px;
+		margin: 0;
+		border: none;
+		
+		&.play {
+			background: url(../images/play.png) no-repeat;
+			background-size: 42%;
+			background-position: center center;
+			
+			@media all and (min-width: 600px) {
+				background-size: 40px;
+			}
+		}
+		&.pause {
+			background: url(../images/pause.png) no-repeat;
+			background-size: 40%;
+			background-position: center center;
+			
+			@media all and (min-width: 600px) {
+				background-size: 40px;
+			}
+		}
+		&.reset {
+			float: right;
+			background: url(../images/clear.png) no-repeat;
+			background-size: 50%;
+			background-position: center center;
+			
+			@media all and (min-width: 600px) {
+				background-size: 40px;
+			}
+		}
+		&.resetStart {
+			position: absolute;
+			background: #f9f9f9 url(../images/play.png) no-repeat;
+			background-size: 42%;
+			background-position: center center;
+			top: 0;
+			left: 0;	
+			height: 50px;
+			
+			@media all and (min-width: 600px) {
+				background-size: 40px;
+			}
+		}
+		&.alarmStop {
+			background: #f9f9f9 url(../images/alarmOff.png) no-repeat;
+			background-size: 55%;
+			background-position: center center;
+			position: absolute;
+			top: 0;
+			right: 0;	
+			
+			@media all and (min-width: 600px) {
+				background-size: 40px;
+			}
+		}
+	}
+}
