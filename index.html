@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="themes/CookChook.css" />
     <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
-
  
     <!-- iPhone and iPad icons -->
     <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png" />
@@ -210,11 +209,6 @@
                 <div class="tabText">Timers</div>
                 </a>
             </li>
-            <li>
-            	<a href="#contact" data-icon="mail" data-transition="none">
-                <div class="tabText">Feedback</div>
-                </a>
-            </li>
             </ul>
         </div><!-- end navbar -->
     </div><!-- end footer -->
@@ -265,62 +259,11 @@
                 <div class="tabText">Timers</div>
                 </a>
             </li>
-            <li>
-            	<a href="#contact" data-icon="mail" data-transition="none">
-                <div class="tabText">Feedback</div>
-                </a>
-            </li>
             </ul>
         </div><!-- end navbar -->
     </div><!-- end footer -->
 
 </div><!-- end TIMERS page -->
-
-
-<!-- ///////////////////////////// CONTACT ///////////////////////////// -->
-
-
-<div data-role="page" data-control-title="Contact" id="contact" data-theme="c">
-	
-    <div data-role="header" data-position="fixed" data-theme="a" class="header" data-tap-toggle="false">
-  		<h1 class="ui-title">Contact Us</h1>
-		</div>
-    
-    <div role="main" class="ui-content">
-    	<h2>Contact Us</h2>
-        <p><a href="tel:0431318031" class="ui-btn ui-btn-custom ui-icon-phone ui-btn-icon-left" data-transition="none">
-        0431 318 031</a>
-        </p>
-        <p><a href="mailto:hello@hilaryseselja.com" class="ui-btn ui-btn-custom ui-icon-mail ui-btn-icon-left" data-transition="none">
-        hello@hilaryseselja.com
-        </a>
-        </p> 
-    </div>
-   
-       <div data-role="footer" data-position="fixed" data-theme="b" style="border:none;" id="footer-nav" data-tap-toggle="false">
-   		<div data-role="navbar">
-        	<ul>
-            <li>
-            	<a href="#home" data-icon="home" data-transition="none" >
-                <div class="tabText">Home</div>
-                </a>
-            </li>
-            <li>
-            	<a href="#timers" data-icon="clock" data-transition="none">
-                <div class="tabText">Timers</div>
-                </a>
-            </li>
-            <li>
-            	<a href="#contact" data-icon="mail" data-transition="none" class="ui-btn-active ui-state-persist">
-                <div class="tabText">Feedback</div>
-                </a>
-            </li>
-            </ul>
-        </div><!-- end navbar -->
-    </div><!-- end footer -->
-
-</div><!-- end CONTACT page -->
-
 
 <!-- scripts at the bottom of the pge to make the page load faster -->
     
@@ -329,9 +272,9 @@
     
     <!-- Script to enable files in Chrome -->
     <script>
-        $(document).bind('mobileinit',function(){
-            $.mobile.changePage.defaults.changeHash = false;
-            $.mobile.hashListeningEnabled = false;
+       $(document).bind('mobileinit',function(){
+            //$.mobile.changePage.defaults.changeHash = false;
+            //$.mobile.hashListeningEnabled = false;
             $.mobile.pushStateEnabled = false;
         });
     </script>
@@ -344,7 +287,7 @@
     
     <!-- jQuery functions - form handling -->
     <!--<script src="js/main.js"></script>-->
-    
+
 </body>
 
 </html>

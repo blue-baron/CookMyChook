@@ -1,4 +1,5 @@
 /*jshint browser: true, jquery: true*/
+
 //////////// -- VALIDATION OBJECT  --////////////
 var validate = {
 	addZero: function (num) {
@@ -393,7 +394,7 @@ $(document).ready(function (){
 		controller.scheduleTimers();
 		controller.setDisplay();
 		//direct to timers window
-		window.location.href = '#timers';
+		window.location.replace('#timers');
 		//only show 'no timers' msg if there are actually no timers.
 		if (controller.timers.length === 0) {
 			$('#noTimersMsg').show();
