@@ -1,10 +1,13 @@
 /*jshint browser: true, jquery: true*/
 
-//////////// -- VALIDATION OBJECT  --////////////
+
+////////////////////// -- VALIDATION OBJECT -- //////////////////////
+
 var validate = {
-	addZero: function (num) {
+	dblDigit: 10,
+    addZero: function (num) {
 		var makeInt = num * 1;//remove leading zero by multiplying by 1
-		if (makeInt < 10) { makeInt = '0' + makeInt; }
+		if (makeInt < this.dblDigit) { makeInt = '0' + makeInt; }
 		return makeInt;
 	},
 	
@@ -18,8 +21,8 @@ var validate = {
 	},
 	
 	validMinSec: function (input){
-		var under60 = /^([01]?\d|[0-5][0-9])$/;
-		var valid = under60.test(input);
+		var under60regex = /^([01]?\d|[0-5][0-9])$/;
+		var valid = under60regex.test(input);
 		if (valid) {
 			valid = this.addZero(input);
 			return valid;
@@ -64,7 +67,7 @@ var validate = {
 
 
 
-////////////////////// -- TIMER OBJECT --//////////////////////
+////////////////////// -- TIMER OBJECT -- //////////////////////
 
 function Timer(name, hours, minutes, seconds) {
 	this.name = name;
@@ -146,7 +149,8 @@ Timer.prototype.alarm = function(){
 };
 
 
-////////////////////// -- CONTROLLER OBJECT  --//////////////////////
+
+////////////////////// -- CONTROLLER OBJECT -- //////////////////////
 var controller = {
 	
 	addTimers: function () {			
@@ -154,10 +158,11 @@ var controller = {
 		//jQuery mobile adds additional spans with same class name - not helpful!
 		var unfliteredItems = document.getElementsByClassName('itemName');
 		var 	menuItems = [];
-		for (var h = 0; h < unfliteredItems.length; h++) {
-			var itemType = unfliteredItems[h].tagName;
+        var i;
+		for (i = 0; i < unfliteredItems.length; i++) {
+			var itemType = unfliteredItems[i].tagName;
 			if (itemType === 'SELECT' || itemType === 'INPUT') { 
-				menuItems.push(unfliteredItems[h]);
+				menuItems.push(unfliteredItems[i]);
 			}	
 		}
 	
@@ -165,7 +170,7 @@ var controller = {
 			itemMin = document.getElementsByClassName('itemMin'),
 			itemSec = document.getElementsByClassName('itemSec');
 				
-		for (var i = 0; i < itemHrs.length; i++) {
+		for (i = 0; i < itemHrs.length; i++) {
 		//parse input create timer ONLY IF time is valid
 			if (itemHrs[i].value && itemMin[i].value && itemSec[i].value) {
 				// parse name input, create default name if not supplied
@@ -177,10 +182,11 @@ var controller = {
 				}//end if inputTime		
 			}//end for loop
 		
-		//add blank timers to timers array if this.timers length < 3
-		if(this.timers.length < 3) {
-			var count = 3 - this.timers.length;
-			for (var j = 0; j < count; j++) {
+		//add blank timers to timers array if this.timers length < total number of timers.
+		var numTimers = 3;
+        if(this.timers.length < numTimers) {
+			var count = numTimers - this.timers.length;
+			for (i = 0; i < count; i++) {
 				var blank = new Timer('Timer', 0, 0, 0);
 				blank.ended = true;
 				this.timers.push(blank);
@@ -197,9 +203,10 @@ var controller = {
 			});	
 		//Increment timer name/id to avoid bugs caused by duplicates
 		var count = 1;	
-		for (var h = 0; h < this.timers.length; h++) {
-			this.timers[h].name = count + " - " + this.timers[h].name;
-			this.timers[h].id = this.timers[h].name.replace(/ /g, '');
+		var i;
+        for (i = 0; i < this.timers.length; i++) {
+			this.timers[i].name = count + " - " + this.timers[i].name;
+			this.timers[i].id = this.timers[i].name.replace(/ /g, '');
 			count++;
 		}
 		
@@ -214,7 +221,7 @@ var controller = {
 			}; 
 			
 			//create handlers for setTimeout
-			for (var i = 0; i < this.timers.length; i++) {
+			for (i = 0; i < this.timers.length; i++) {
 				var timerDuration = this.timers[i].duration.getHours() + this.timers[i].duration.getMinutes() + this.timers[i].duration.getSeconds();
 				
 				if (timerDuration > 0 ) {
@@ -318,7 +325,7 @@ var controller = {
 
 
 
-////////////////////// -- JQUERY FORM HANDLING  --//////////////////////
+////////////////////// -- JQUERY FORM HANDLING -- //////////////////////
 $(document).ready(function (){
 
 	
