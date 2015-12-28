@@ -8,15 +8,17 @@ The app runs up to three timers at once. Timers are scheduled to end at the same
 [hilaryseselja.com/CookMyChookDemo/](http://hilaryseselja.com/CookMyChookDemo/)
 
 ##User Documentation
-CookChook_Documentation.pdf
+[CookChook_Documentation.pdf](github.com/blue-baron/CookMyChook/blob/master/CookChook_Documentation.pdf)
 
 ##JS
-js/CookChookTimers.js
+[js/CookChookTimers.js](https://github.com/blue-baron/CookMyChook/blob/master/js/CookChookTimers.js)
 
 ##CSS
 Working Sass files: CookMyChook/css/scss/
 
 ##Contact
 Hilary Seselja
+
 [hilaryseselja.com](http://www.hilaryseselja.com)
+
 [hello@hilaryseselja.com](mailto:hello@hilaryseselja.com)
